@@ -22,8 +22,6 @@ apply plugin: 'application'
 apply plugin: 'eclipse'
 
 mainClassName = 'com.ibm.matos.Utils'
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 version = '1.0'
 
 repositories {
