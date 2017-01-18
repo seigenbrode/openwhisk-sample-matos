@@ -9,6 +9,6 @@
 "kafkaNumRecords": "1000",
 "swiftAuthUrl" : "https://identity.open.softlayer.com/v3/auth/tokens",
 "swiftRegion" : "dallas",
-"swiftContainer" : "matos-folder"
+"swiftContainer" : "customer-success"
 }
 
