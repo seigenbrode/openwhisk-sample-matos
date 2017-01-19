@@ -39,6 +39,7 @@ public class Monitor {
 	private static Logger logger = Logger.getLogger(Monitor.class);
 	private static long lastOffset;
 	private static long committedOffset;
+	private static String apiKey;
 	private static Config config;
 	private final static String KAFKA_CONSUMER_ID_KEY = "group.id";
 	
@@ -93,7 +94,7 @@ public class Monitor {
 	private static void doMain(boolean once) throws InterruptedException {
 		
 		String kafkaHost;
-		String apiKey;
+		//String apiKey;
 		String topic;
 		int partition;
 		String consumerId;
