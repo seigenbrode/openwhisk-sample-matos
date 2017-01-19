@@ -164,7 +164,7 @@ public class Monitor {
 	private static long getLastOffset() {
 		return lastOffset;
 	}
-        private static long getKafkaApiKey() {
+        private static String getKafkaApiKey() {
 		return apiKey;
 	}
 	private static long getCommittedOffset() {
