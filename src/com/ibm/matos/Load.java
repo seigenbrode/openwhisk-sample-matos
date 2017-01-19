@@ -105,6 +105,8 @@ public class Load {
                 logger.log(Level.INFO, "The value in API key before parse = " + apiKey);
 		Utils.updateJaasConfiguration(apiKey.substring(0, 16), apiKey.substring(16));
                 logger.log(Level.INFO, "The value in API key after parse = " + apiKey);
+		logger.log(Level.INFO, "The value in getClientConfiguration = " + Utils.getClientConfiguration(kafkaHost, true));
+			
 		kafkaProducer = new KafkaProducer<byte[], byte[]>(
 				Utils.getClientConfiguration(kafkaHost, true));
 		logger.log(Level.INFO, "The value in kafkaProducer = " + kafkaProducer);
