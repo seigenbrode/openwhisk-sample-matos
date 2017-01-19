@@ -102,12 +102,12 @@ public class Load {
 		apiKey = config.get(Config.KAFKA_API_KEY_PROP);
 		topic = config.get(Config.KAFKA_TOPIC_PROP);
 		numRecords = Integer.parseInt(config.get(Config.KAFKA_NUM_RECORDS_PROP));
-
+                logger.log(Level.INFO, "The value in API key before parse = " + apiKey);
 		Utils.updateJaasConfiguration(apiKey.substring(0, 16), apiKey.substring(16));
-
+                logger.log(Level.INFO, "The value in API key after parse = " + apiKey);
 		kafkaProducer = new KafkaProducer<byte[], byte[]>(
 				Utils.getClientConfiguration(kafkaHost, true));
-		
+		logger.log(Level.INFO, "The value in kafkaProducer = " + kafkaProducer);
 		done = false;
 		producedMessages = 0;
 		lastOffset = -1;
