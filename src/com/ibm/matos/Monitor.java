@@ -60,8 +60,10 @@ public class Monitor {
 		}
 
 		JsonObject response = new JsonObject();
+		response.addProperty("kafkaApiKey", getKafkaApiKey());
 		response.addProperty("last", getLastOffset());
 		response.addProperty("committed", getCommittedOffset());
+
 		return response;
 	}
 
@@ -122,7 +124,7 @@ public class Monitor {
 		propsCommitted.put(KAFKA_CONSUMER_ID_KEY, consumerId);
 		KafkaConsumer<byte[], byte[]> kafkaConsumerCommitted = new KafkaConsumer<byte[], 
 				byte[]>(propsCommitted, new ByteArrayDeserializer(),	new ByteArrayDeserializer());
-
+                 
 		lastOffset = committedOffset = -1;
 
 		while (!done) {
@@ -162,7 +164,9 @@ public class Monitor {
 	private static long getLastOffset() {
 		return lastOffset;
 	}
-	
+        private static long getKafkaApiKey() {
+		return apiKey;
+	}
 	private static long getCommittedOffset() {
 		return committedOffset;
 	}
