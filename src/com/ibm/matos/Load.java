@@ -131,7 +131,7 @@ public class Load {
 				// message are converted to UTF-8.
 				//ProducerRecord<byte[], byte[]> record = new ProducerRecord<byte[], byte[]>(topic,
 						//fieldName.getBytes("UTF-8"), list.toString().getBytes("UTF-8"));
-				ProducerRecord<byte[], byte[]> record = new ProducerRecord<byte[], byte[]>(topic,0,apiKey,list.toString().getBytes("UTF-8"));
+				ProducerRecord<byte[], byte[]> record = new ProducerRecord<byte[], byte[]>(topic,0,apiKey.getBytes("UTF-8"),list.toString().getBytes("UTF-8"));
                                 logger.log(Level.INFO, record);
 				// keep the metadata of the last produced message 
 				fm = kafkaProducer.send(record);
