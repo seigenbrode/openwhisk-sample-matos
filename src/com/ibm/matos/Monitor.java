@@ -64,7 +64,8 @@ public class Monitor {
 		response.addProperty("kafkaApiKey", getKafkaApiKey());
 		response.addProperty("last", getLastOffset());
 		response.addProperty("committed", getCommittedOffset());
-
+                response.addProperty("kafkaStartOffset", "0");
+		response.addProperty("kafkaEndOffset", "1000");
 		return response;
 	}
 
