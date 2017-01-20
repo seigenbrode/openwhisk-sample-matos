@@ -55,6 +55,7 @@ public class Batch {
 	public static JsonObject main(JsonObject args) {
 
 		try {
+			logger.log(Level.INFO, "The value in args is = " + args);
 			Utils.initDirs();
 			Utils.extractResourcesToFilesystem(false);
 
