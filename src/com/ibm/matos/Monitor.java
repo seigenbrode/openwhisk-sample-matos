@@ -62,8 +62,8 @@ public class Monitor {
 
 		JsonObject response = new JsonObject();
 		response.addProperty("kafkaApiKey", getKafkaApiKey());
-		//response.addProperty("last", getLastOffset());
-		//response.addProperty("committed", getCommittedOffset());
+		response.addProperty("last", getLastOffset());
+		response.addProperty("committed", getCommittedOffset());
 
 		return response;
 	}
