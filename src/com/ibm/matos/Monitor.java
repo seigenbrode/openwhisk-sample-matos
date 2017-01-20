@@ -66,6 +66,9 @@ public class Monitor {
 		response.addProperty("committed", getCommittedOffset());
                 response.addProperty("kafkaStartOffset", "0");
 		response.addProperty("kafkaEndOffset", "1000");
+		response.addProperty("swiftTenantId", "6e23fc1b82e24512ad4cd73b2c08d856");
+		response.addProperty("swiftUserId", "76ae53f00be34b4186b9556bd0a9f8dc");
+		response.addProperty("swiftPassword", "koX_8X#bk3g]#RGY");
 		return response;
 	}
 
