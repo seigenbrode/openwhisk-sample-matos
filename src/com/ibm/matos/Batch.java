@@ -112,7 +112,7 @@ public class Batch {
 
 		Utils.setJaasLocation();
          
-		logger.log(Level.INFO, "The value in Config.kafkaApiKey = " + config[0]);
+		logger.log(Level.INFO, "The value in Config.kafkaApiKey = " + config.get(Config.KAFKA_API_KEY_PROP));
 		String apiKey = config.get(Config.KAFKA_API_KEY_PROP);
 		Utils.updateJaasConfiguration(apiKey.substring(0, 16), apiKey.substring(16));
 
