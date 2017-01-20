@@ -78,7 +78,7 @@ public class Batch {
 
 		Utils.initDirs();
 		Utils.extractResourcesToFilesystem(false);
-
+                logger.log(Level.INFO, "The value in args is = " + args);
 		if (args.length >= 5 && args.length <=8) {
 			config = new Config(args[0]);
 			HashMap<String,String> amap = new HashMap<String,String>();
