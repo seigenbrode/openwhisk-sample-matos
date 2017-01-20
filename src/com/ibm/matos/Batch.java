@@ -81,19 +81,19 @@ public class Batch {
 		Utils.extractResourcesToFilesystem(false);
                 logger.log(Level.INFO, "The value in args is = " + args);
 		if (args.length >= 5 && args.length <=8) {
-			config = new Config(args[0]);
-			HashMap<String,String> amap = new HashMap<String,String>();
-			amap.put(Config.KAFKA_API_KEY_PROP, args[1]);
-			amap.put(Config.SWIFT_TENANT_ID_PROP, args[2]);
-			amap.put(Config.SWIFT_USER_ID_PROP, args[3]);
-			amap.put(Config.SWIFT_PASSWORD_PROP, args[4]);
-			if (args.length >= 6)
-				amap.put(Config.KAFKA_PARTITION_PROP, args[5]);
-			if (args.length >= 7)
-				amap.put(Config.KAFKA_START_OFFSET_PROP, args[6]);
-			if (args.length >= 8)
-				amap.put(Config.KAFKA_END_OFFSET_PROP, args[7]);
-			config.overrideProperties(amap);
+			//config = new Config(args[0]);
+			///HashMap<String,String> amap = new HashMap<String,String>();
+			//amap.put(Config.KAFKA_API_KEY_PROP, args[1]);
+			//amap.put(Config.SWIFT_TENANT_ID_PROP, args[2]);
+			//amap.put(Config.SWIFT_USER_ID_PROP, args[3]);
+			//amap.put(Config.SWIFT_PASSWORD_PROP, args[4]);
+		//	if (args.length >= 6)
+		//		amap.put(Config.KAFKA_PARTITION_PROP, args[5]);
+		//	if (args.length >= 7)
+		//		amap.put(Config.KAFKA_START_OFFSET_PROP, args[6]);
+		//	if (args.length >= 8)
+		//		amap.put(Config.KAFKA_END_OFFSET_PROP, args[7]);
+		//	config.overrideProperties(amap);
 		} else {
 			logger.log(Level.ERROR, "Usage:\n\n" +
 					"java -jar <name_of_jar>.jar <config-json-file-name> " +
